@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '_igtoud8=l*xejhiwtfz$ce-fu*%80&^hybem91#g#)5j7td#z'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'whitenoise.runserver_nostatic',
     'auction',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -42,6 +43,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -121,7 +123,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 if DEBUG:
-    STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
+    STATICFILES_DIRS = [os.path.join(BASE_DIR,'static/')]
 else:
     STATIC_ROOT = os.path.join(BASE_DIR,'static/')
 

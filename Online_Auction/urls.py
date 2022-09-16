@@ -70,5 +70,5 @@ urlpatterns = [
     path('load-courses/', load_courses, name='ajax_load_courses'),
     path('load-courses1/', load_courses1, name='ajax_load_courses1'),
     path('product_detail2(<int:pid>)', product_detail2, name='product_detail2'),
-] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
-+ static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
+] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT) 
+#+ static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)

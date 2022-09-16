@@ -1,6 +1,6 @@
-from django.conf.urls import url
-from django.conf import settings
-from django.views.static import serve
+#from django.conf.urls import url
+#from django.conf import settings
+#from django.views.static import serve
 from django.contrib import admin
 from django.urls import path
 from django.conf import settings
@@ -9,7 +9,7 @@ from auction.views import *
 
 urlpatterns = [
     #path('auction',include('auction.urls')),
-    url(r'^static/(?P<path>.*)$',serve,{'document_root':settings.STATIC_ROOT}),
+    #url(r'^static/(?P<path>.*)$',serve,{'document_root':settings.STATIC_ROOT}),
     path('admin/', admin.site.urls),
     path('',Home,name="home"),
     path('user_home',Bidder_Home,name="user_home"),

@@ -5,7 +5,7 @@ from django.conf.urls.static import static
 from auction.views import *
 
 urlpatterns = [
-    path('auction',include('auction.urls')),
+    #path('auction',include('auction.urls')),
     path('admin/', admin.site.urls),
     path('',Home,name="home"),
     path('user_home',Bidder_Home,name="user_home"),

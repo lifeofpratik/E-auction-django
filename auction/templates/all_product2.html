@@ -29,7 +29,8 @@
     <td>{{i.product.session.time}}</td>
     <td>{{i.user.user.username}}</td>
     <td>{{i.product.status.status}}</td>
-    <td><a href="">  <i style="font-size:30px;color:red;margin-left:12%" class="fa fa-trash-o" onclick="return confirm('Are you sure?')"></i></a></td>
+    <td><a href="{% url 'delete_product' i.id %}">  <i style="font-size:30px;color:red;margin-left:12%" class="fa fa-trash-o" onclick="return confirm('Are you sure?')"></i></a></td>
+
   </tr>
 
 {% endfor %}

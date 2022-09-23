@@ -69,6 +69,7 @@ urlpatterns = [
     path('delete_category(<int:pid>)', delete_category, name='delete_category'),
     path('delete_feedback(<int:pid>)', delete_feedback, name='delete_feedback'),
     path('delete_subcategory(<int:pid>)', delete_subcategory, name='delete_subcategory'),
+    path('delete_product(<int:pid>)', delete_product, name='delete_product'),
     path('delete_session_date(<int:pid>)', delete_session_date, name='delete_session_date'),
     path('delete_session_time(<int:pid>)', delete_session_time, name='delete_session_time'),
     path('load-courses/', load_courses, name='ajax_load_courses'),

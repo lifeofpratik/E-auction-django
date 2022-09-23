@@ -597,6 +597,11 @@ def delete_session_date(request,pid):
     cat.delete()
     return redirect('view_session_date')
 
+def delete_product(request,pid):
+    cat = Product.objects.get(id=pid)
+    cat.delete()
+    return redirect('all_product2')
+
 
 def view_session_date(request):
     if not request.user.is_staff:
